@@ -10,53 +10,60 @@
   </head>
   <body>
     <aside class="details">
-      <img src="./eisenhower-matrix.jpg" alt="The Eisenhower Matrix is a productivity, prioritization, and time-management framework designed to help you prioritize a list of tasks or agenda items by first categorizing those items according to their urgency and importance.">
-      <a  class="more-inf" 
+      <img  class="details__image" 
+            src="./eisenhower-matrix.jpg"
+            alt="The Eisenhower Matrix is a productivity, prioritization, and time-management framework designed to help you prioritize a list of tasks or agenda items by first categorizing those items according to their urgency and importance.">
+      <a  class="details__link" 
           href="https://goal-life.com/page/method/matrix-eisenhower">
         Want more details?
       </a>
     </aside>
     <main class="container">
-      <form action="javascript:void(0);" id="add-task-form">
-        <label for="new-task" class="title new-task-title">Add Item</label>
+      <form class="new-task"
+            id="add-task-form"
+            action="javascript:void(0);">
+        <label  class="title new-task__title"
+                for="new-task">
+          Add Item
+        </label>
         <div class="row">
           <input  id="new-task"
-                  class="task-field"
+                  class="text-field new-task__field"
                   type="text">
           <button class="button">Add</button>
         </div>
       </form>
       <h3 class="title">Todo</h3>
       <ul id="incompleted-tasks" class="task-list">
-        <li class="task-list-item">
-          <input type="checkbox" class="task-status" id="unique-id-1">
-          <label class="task-description" for="unique-id-1">Pay Bills</label>
-          <input type="text" class="task-field">
-          <button class="button edit">Edit</button>
-          <button class="button delete" aria-label="delete current task">
+        <li class="task-list__item task">
+          <input type="checkbox" class="task__status" id="unique-id-1">
+          <label class="task__description js-description" for="unique-id-1">Pay Bills</label>
+          <input type="text" class="text-field task__text-field">
+          <button class="button task__button-edit js-button-edit">Edit</button>
+          <button class="button task__button-delete js-button-delete" aria-label="delete current task">
             <img class="icon" src="./remove.svg" alt="">
           </button>
         </li>
-        <li class="task-list-item edit-mode">
-          <input type="checkbox" class="task-status" id="unique-id-2">
-          <label class="task-description" for="unique-id-2">Go Shopping</label>
+        <li class="task-list__item task edit-mode">
+          <input type="checkbox" class="task__status" id="unique-id-2">
+          <label class="task__description js-description" for="unique-id-2">Go Shopping</label>
           <input  type="text" 
                   value="Go Shopping" 
-                  class="task-field">
-          <button class="button edit">Save</button>
-          <button class="button delete" aria-label="delete current task">
+                  class="text-field task__text-field">
+          <button class="button task__button-edit js-button-edit">Save</button>
+          <button class="button task__button-delete js-button-delete" aria-label="delete current task">
             <img class="icon" src="./remove.svg" alt="">
           </button>
         </li>
       </ul>
       <h3 class="title">Completed</h3>
       <ul id="completed-tasks" class="task-list">
-        <li class="task-list-item">
-          <input type="checkbox" class="task-status" id="unique-id-3" checked>
-          <label class="task-description" for="unique-id-3">See the Doctor</label>
-          <input type="text" class="task-field">
-          <button class="button edit">Edit</button>
-          <button class="button delete" aria-label="delete current task">
+        <li class="task-list__item task">
+          <input type="checkbox" class="task__status" id="unique-id-3" checked>
+          <label class="task__description js-description" for="unique-id-3">See the Doctor</label>
+          <input type="text" class="text-field task__text-field">
+          <button class="button task__button-edit js-button-edit">Edit</button>
+          <button class="button task__button-delete js-button-delete" aria-label="delete current task">
             <img class="icon" src="./remove.svg" alt="">
           </button>
         </li>
