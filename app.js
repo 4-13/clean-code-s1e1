@@ -31,15 +31,18 @@ var createNewTaskElement=function(taskString){
   //button.delete
   var deleteButton=document.createElement("button");//delete button
   var deleteButtonImg=document.createElement("img");//delete button image
-
+  
   listItem.className = 'task-list-item';
+
+  const id = crypto.randomUUID();
 
   label.innerText=taskString;
   label.className='task-description';
-
+  label.htmlFor = id;
   //Each elements, needs appending
   checkBox.type="checkbox";
   checkBox.className = 'task-status';
+  checkBox.id = id;
   editInput.type="text";
   editInput.className="task-field";
 
@@ -47,8 +50,10 @@ var createNewTaskElement=function(taskString){
   editButton.className="button edit";
 
   deleteButton.className="button delete";
+  deleteButton.setAttribute('aria-label', `delete current task`)
   deleteButtonImg.src='./remove.svg';
   deleteButtonImg.className = 'icon';
+  deleteButtonImg.alt = '';
   deleteButton.appendChild(deleteButtonImg);
 
 

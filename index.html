@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Todo App</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" 
@@ -9,15 +9,15 @@
           media="screen">
   </head>
   <body>
-    <div class="details">
-      <img src="./eisenhower-matrix.jpg">
+    <aside class="details">
+      <img src="./eisenhower-matrix.jpg" alt="The Eisenhower Matrix is a productivity, prioritization, and time-management framework designed to help you prioritize a list of tasks or agenda items by first categorizing those items according to their urgency and importance.">
       <a  class="more-inf" 
           href="https://goal-life.com/page/method/matrix-eisenhower">
         Want more details?
       </a>
-    </div>
-    <div class="container">
-      <p id="add-task-form">
+    </aside>
+    <main class="container">
+      <form action="javascript:void(0);" id="add-task-form">
         <label for="new-task" class="title new-task-title">Add Item</label>
         <div class="row">
           <input  id="new-task"
@@ -25,43 +25,43 @@
                   type="text">
           <button class="button">Add</button>
         </div>
-      </p>
+      </form>
       <h3 class="title">Todo</h3>
       <ul id="incompleted-tasks" class="task-list">
         <li class="task-list-item">
-          <input type="checkbox" class="task-status">
-          <label class="task-description">Pay Bills</label>
+          <input type="checkbox" class="task-status" id="unique-id-1">
+          <label class="task-description" for="unique-id-1">Pay Bills</label>
           <input type="text" class="task-field">
           <button class="button edit">Edit</button>
-          <button class="button delete">
-            <img class="icon" src="./remove.svg">
+          <button class="button delete" aria-label="delete current task">
+            <img class="icon" src="./remove.svg" alt="">
           </button>
         </li>
         <li class="task-list-item edit-mode">
-          <input type="checkbox" class="task-status">
-          <label class="task-description">Go Shopping</label>
+          <input type="checkbox" class="task-status" id="unique-id-2">
+          <label class="task-description" for="unique-id-2">Go Shopping</label>
           <input  type="text" 
                   value="Go Shopping" 
                   class="task-field">
           <button class="button edit">Save</button>
-          <button class="button delete">
-            <img class="icon" src="./remove.svg">
+          <button class="button delete" aria-label="delete current task">
+            <img class="icon" src="./remove.svg" alt="">
           </button>
         </li>
       </ul>
       <h3 class="title">Completed</h3>
       <ul id="completed-tasks" class="task-list">
         <li class="task-list-item">
-          <input type="checkbox" class="task-status" checked>
-          <label class="task-description">See the Doctor</label>
+          <input type="checkbox" class="task-status" id="unique-id-3" checked>
+          <label class="task-description" for="unique-id-3">See the Doctor</label>
           <input type="text" class="task-field">
           <button class="button edit">Edit</button>
-          <button class="button delete">
-            <img class="icon" src="./remove.svg">
+          <button class="button delete" aria-label="delete current task">
+            <img class="icon" src="./remove.svg" alt="">
           </button>
         </li>
       </ul>
-    </div>
+    </main>
     <script src="app.js"></script>
   </body>
 </html>
